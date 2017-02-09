@@ -248,7 +248,7 @@ default_services() ->
 topology_aware_services() ->
     case cluster_compat_mode:is_cluster_45() of
         true ->
-            [fts | maybe_example_service()];
+            [index | maybe_example_service()];
         false ->
             []
     end.
